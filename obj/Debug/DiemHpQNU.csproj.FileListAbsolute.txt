@@ -1,0 +1,12 @@
+D:\DiemHpQNU\bin\Debug\DiemHpQNU.exe.config
+D:\DiemHpQNU\bin\Debug\DiemHpQNU.exe
+D:\DiemHpQNU\bin\Debug\DiemHpQNU.pdb
+D:\DiemHpQNU\obj\Debug\DiemHpQNU.csproj.AssemblyReference.cache
+D:\DiemHpQNU\obj\Debug\DiemHpQNU.DiemHP.resources
+D:\DiemHpQNU\obj\Debug\DiemHpQNU.Properties.Resources.resources
+D:\DiemHpQNU\obj\Debug\DiemHpQNU.csproj.GenerateResource.cache
+D:\DiemHpQNU\obj\Debug\DiemHpQNU.csproj.CoreCompileInputs.cache
+D:\DiemHpQNU\obj\Debug\DiemHpQNU.exe
+D:\DiemHpQNU\obj\Debug\DiemHpQNU.pdb
+D:\DiemHpQNU\obj\Debug\DiemHpQNU.themhp.resources
+D:\DIEMHPQNU\obj\Debug\DiemHpQNU.suaxoahp.resources
