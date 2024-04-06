@@ -193,10 +193,18 @@ namespace DiemHpQNU
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            DiemHP.is_ok = true;
-            DiemHP.modify_mode = 2;
-            DiemHP.index_update = hocphan_cb.SelectedIndex;
-            this.Close();
+            if(hocphan_cb.SelectedIndex != -1)
+            {
+                DiemHP.is_ok = true;
+                DiemHP.modify_mode = 2;
+                DiemHP.index_update = hocphan_cb.SelectedIndex;
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Bạn chưa chọn phần tử cần xoá");
+            }
+
         }
     }
 }
