@@ -18,8 +18,11 @@ namespace DiemHpQNU
         }
         void chuanHoaData()
         {
-            diemquatrinh_tb.Text = diemquatrinh_tb.Text.Replace('.', ',');
-            diemck_tb.Text = diemck_tb.Text.Replace('.', ',');
+            char format_demical = Convert.ToChar(System.Globalization.CultureInfo.CurrentCulture.NumberFormat.NumberDecimalSeparator);
+            diemquatrinh_tb.Text = diemquatrinh_tb.Text.Replace('.', format_demical);
+            diemck_tb.Text = diemck_tb.Text.Replace('.', format_demical);
+            diemquatrinh_tb.Text = diemquatrinh_tb.Text.Replace(',', format_demical);
+            diemck_tb.Text = diemck_tb.Text.Replace(',', format_demical);
         }
         private void suaxoahp_Load(object sender, EventArgs e)
         {

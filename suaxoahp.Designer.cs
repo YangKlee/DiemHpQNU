@@ -196,7 +196,7 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(245, 13);
             this.label7.TabIndex = 19;
-            this.label7.Text = "@YangKlee2024-Rel-Beta<Build: 050420241315>";
+            this.label7.Text = "@YangKlee2024-Rel-Beta<Build: 060420241415>";
             // 
             // suaxoahp
             // 

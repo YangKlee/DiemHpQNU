@@ -213,7 +213,7 @@ namespace DiemHpQNU
          */
         private void modify_bt_Click(object sender, EventArgs e)
         {
-            
+            list_hp.Clear();
             for(int i = 0; i < total_hp; i++)
             {
                 list_hp.Add(point_table.Rows[i].Cells[0].Value.ToString());

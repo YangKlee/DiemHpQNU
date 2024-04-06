@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
@@ -24,8 +25,11 @@ namespace DiemHpQNU
         }
         void chuanHoaData()
         {
-            diemquatrinh_tb.Text = diemquatrinh_tb.Text.Replace('.', ',');
-            diemck_tb.Text = diemck_tb.Text.Replace('.', ',');
+            char format_demical = Convert.ToChar(System.Globalization.CultureInfo.CurrentCulture.NumberFormat.NumberDecimalSeparator);
+            diemquatrinh_tb.Text = diemquatrinh_tb.Text.Replace('.', format_demical);
+            diemck_tb.Text = diemck_tb.Text.Replace('.', format_demical);
+            diemquatrinh_tb.Text = diemquatrinh_tb.Text.Replace(',', format_demical);
+            diemck_tb.Text = diemck_tb.Text.Replace(',', format_demical);
         }
         float precent_ck;
         private void button1_Click(object sender, EventArgs e)
@@ -39,6 +43,7 @@ namespace DiemHpQNU
                 chuanHoaData();
                 namehp = namehp_tb.Text;
                 sotinchi = (int)sotc_numric.Value;
+                //MessageBox.Show(System.Globalization.CultureInfo.CurrentCulture.NumberFormat.NumberDecimalSeparator);
                 diemQT = float.Parse(diemquatrinh_tb.Text);
                 diemCK = float.Parse(diemck_tb.Text);
                 /*

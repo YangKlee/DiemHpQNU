@@ -161,7 +161,7 @@
             this.heso_combo.FormattingEnabled = true;
             this.heso_combo.Items.AddRange(new object[] {
             "5-5 (50% giữa kỳ, 50% cuối kỳ)",
-            "5-6 (40% giữa kỳ, 60% cuối kỳ)",
+            "4-6 (40% giữa kỳ, 60% cuối kỳ)",
             "3-7 (30% giữa kỳ, 70% cuối kỳ)"});
             this.heso_combo.Location = new System.Drawing.Point(112, 162);
             this.heso_combo.Name = "heso_combo";
@@ -200,7 +200,7 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(245, 13);
             this.label7.TabIndex = 6;
-            this.label7.Text = "@YangKlee2024-Rel-Beta<Build: 050420241315>";
+            this.label7.Text = "@YangKlee2024-Rel-Beta<Build: 060420241415>";
             // 
             // themhp
             // 

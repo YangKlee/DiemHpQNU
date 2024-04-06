@@ -217,7 +217,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(245, 13);
             this.label2.TabIndex = 5;
-            this.label2.Text = "@YangKlee2024-Rel-Beta<Build: 050420241315>";
+            this.label2.Text = "@YangKlee2024-Rel-Beta<Build: 060420241415>";
             // 
             // DiemHP
             // 
