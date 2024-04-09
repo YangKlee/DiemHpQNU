@@ -10,3 +10,8 @@ D:\DiemHpQNU\obj\Debug\DiemHpQNU.exe
 D:\DiemHpQNU\obj\Debug\DiemHpQNU.pdb
 D:\DiemHpQNU\obj\Debug\DiemHpQNU.themhp.resources
 D:\DIEMHPQNU\obj\Debug\DiemHpQNU.suaxoahp.resources
+D:\DIEMHPQNU\bin\Debug\DiemHpQNU.exe.manifest
+D:\DIEMHPQNU\bin\Debug\DiemHpQNU.application
+D:\DIEMHPQNU\obj\Debug\DiemHpQNU.TrustInfo.xml
+D:\DIEMHPQNU\obj\Debug\DiemHpQNU.exe.manifest
+D:\DIEMHPQNU\obj\Debug\DiemHpQNU.application

@@ -207,4 +207,6 @@ namespace DiemHpQNU
 
         }
     }
+    // BẢN QUYỀN THUỘC NGUYỄN KHÁNH DƯƠNG - 4651050044- NHÓM KLEENAHIDA[CNTT K46D]
+    // SẢN PHẨM THAM GIA CUỘC THI PHẦN MỀM KHOA CÔNG NGHỆ THÔNG TIN TRƯỜNG ĐHQN
 }

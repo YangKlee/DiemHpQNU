@@ -51,7 +51,7 @@
     <TargetZone>Custom</TargetZone>
   </PropertyGroup>
   <PropertyGroup>
-    <GenerateManifests>false</GenerateManifests>
+    <GenerateManifests>true</GenerateManifests>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
@@ -64,6 +64,9 @@
   </PropertyGroup>
   <PropertyGroup>
     <ManifestKeyFile>DiemHpQNU_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -118,7 +121,6 @@
     <EmbeddedResource Include="themhp.resx">
       <DependentUpon>themhp.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="DiemHpQNU_TemporaryKey.pfx" />
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

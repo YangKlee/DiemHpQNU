@@ -176,16 +176,6 @@ namespace DiemHpQNU
             themhp.ShowDialog();
             if (is_ok)
             {
-                string trolltrollvn = namehp_input.ToLower();
-                if (trolltrollvn.Contains("never gonna give you up") ||
-                    trolltrollvn.Contains("nevergonnagiveyouup")
-                    || trolltrollvn.Contains("ditmemay") || trolltrollvn.Contains("dm")
-                    || trolltrollvn.Contains("gay"))
-
-                {
-                    System.Diagnostics.Process.Start("https://youtu.be/dQw4w9WgXcQ?si=u6vn7xP7niFK5WQ9");
-                    MessageBox.Show("Bạn sẽ bị rick roll nếu nhập những cụm từ không hợp lệ!");
-                }
                 //MessageBox.Show("Import dữ liệu thành công");
                 point_table.Rows.Add(namehp_input, sotinchi_input, diemQT_input, diemCK_input,
                     TinhdiemHP(diemQT_input, diemCK_input, precent_ck_input),
@@ -198,7 +188,8 @@ namespace DiemHpQNU
             }
             else
             {
-                MessageBox.Show("Đã huỷ");
+                MessageBox.Show("Đã huỷ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                
             }
             config_ui();
 
@@ -278,11 +269,11 @@ namespace DiemHpQNU
                             point_table.Rows[i].Cells[6].Value.ToString() + ';' +
                             point_table.Rows[i].Cells[7].Value.ToString() + '\n');
                     }
-                    MessageBox.Show("Lưu file thành công!");
+                    MessageBox.Show("Lưu file thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch
                 {
-                    MessageBox.Show("Lưu file lỗi");
+                    MessageBox.Show("Lưu file lỗi", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
@@ -293,15 +284,14 @@ namespace DiemHpQNU
         public static List<string> hp_import = new List<string>();
         private void import_bt_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Tính năng này chưa được hoàn thiện!", "Cảnh báo!");
-            //System.Diagnostics.Process.Start("https://youtu.be/dQw4w9WgXcQ?si=u6vn7xP7niFK5WQ9");
+            //MessageBox.Show("Tính năng này chưa được hoàn thiện!", "Cảnh báo!");
+
             //this.Close();
             DialogResult drg_repply = MessageBox.Show("Khi nhập file, toàn bộ dữ liệu đang nhập sẽ bị xoá!. " +
-                "Bạn đồng ý chứ ?", "Cảnh báo", MessageBoxButtons.YesNo);
+                "Bạn đồng ý chứ ?", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if(drg_repply == DialogResult.Yes)
             {
                 reset_all();
-                //System.Diagnostics.Process.Start("https://youtu.be/dQw4w9WgXcQ?si=u6vn7xP7niFK5WQ9");
                 openFileDialog1.Title = "Chọn file cần nhập:";
                 openFileDialog1.Filter = "QNU files (*.QNU)|*.qnu";
                 openFileDialog1.DefaultExt = "QNU";
@@ -340,21 +330,23 @@ namespace DiemHpQNU
   
                         }
                         caluate_point();
-
                     }
                     catch
                     {
-                        MessageBox.Show("File không đúng định dạng!");
+                        MessageBox.Show("Đọc file lỗi, vui lòng xem file đúng định dạng hay chưa", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        reset_all();
                     }
 
                 }
                 else
                 {
-                    MessageBox.Show("Đọc file lỗi!");
+                    MessageBox.Show("Đã huỷ đọc file!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
 
             }
 
         }
     }
+    // BẢN QUYỀN THUỘC NGUYỄN KHÁNH DƯƠNG - 4651050044- NHÓM KLEENAHIDA[CNTT K46D]
+    // SẢN PHẨM THAM GIA CUỘC THI PHẦN MỀM KHOA CÔNG NGHỆ THÔNG TIN TRƯỜNG ĐHQN
 }
