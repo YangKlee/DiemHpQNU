@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.IO;
+using System.Runtime.Remoting.Messaging;
 
 namespace DiemHpQNU
 {
@@ -277,6 +278,7 @@ namespace DiemHpQNU
                             point_table.Rows[i].Cells[6].Value.ToString() + ';' +
                             point_table.Rows[i].Cells[7].Value.ToString() + '\n');
                     }
+                    MessageBox.Show("Lưu file thành công!");
                 }
                 catch
                 {
@@ -285,13 +287,10 @@ namespace DiemHpQNU
             }
             else
                 MessageBox.Show("Lưu file lỗi");
-      
-
-
             //saveFileDialog1.DefaultExt = "txt";
             //saveFileDialog1.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
         }
-
+        public static List<string> hp_import = new List<string>();
         private void import_bt_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Tính năng này chưa được hoàn thiện!", "Cảnh báo!");
@@ -311,18 +310,43 @@ namespace DiemHpQNU
                     url_file = openFileDialog1.FileName;
                     try
                     {
-                        StreamReader sr = new StreamReader(url_file);
-                        int num = int.Parse(sr.ReadLine()); // dong dau tien la so ban ghi
-                        for (int i = 0; i < num; i++)
+                     
+                        StreamReader getnum = new StreamReader(url_file);
+                        int num = int.Parse(getnum.ReadLine()); // dong dau tien la so ban ghi
+                        getnum.Close();
+                        for(int i = 0; i < num; i++)
                         {
-                            string lines = sr.ReadLine();
+                            point_table.Rows.Add(null, null, null, null, null, null, null);
                         }
-                        //MessageBox.Show(a);
+                        for(int j = 0; j < 8; j++)
+                        {
+                            hp_import.Clear();
+                            StreamReader sr = new StreamReader(url_file);
+                            sr.ReadLine();
+                            while (!sr.EndOfStream)
+                            {
+                                    var line = sr.ReadLine();
+                                    var values = line.Split(';');
+                                    hp_import.Add(values[j]);
+                                    //MessageBox.Show(values[j]);
+                            }
+                            //MessageBox.Show(j.ToString());
+                            for(int i = 0; i < num; i++)
+                            {
+                                point_table.Rows[i].Cells[j].Value  = hp_import[i];
+                            }
+                            sr.Close();
+                            total_hp = num;
+  
+                        }
+                        caluate_point();
+
                     }
                     catch
                     {
                         MessageBox.Show("File không đúng định dạng!");
                     }
+
                 }
                 else
                 {
