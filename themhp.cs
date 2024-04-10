@@ -57,7 +57,8 @@ namespace DiemHpQNU
                 }
                 else if (heso_combo.SelectedIndex == 1) { precent_ck = 0.6F; }
                 else if (heso_combo.SelectedIndex == 2) { precent_ck = 0.7F; }
-
+                else if(heso_combo.SelectedIndex == 3) { precent_ck = 0.3F; }
+                else if (heso_combo.SelectedIndex == 4) { precent_ck = 0.4F; }
                 DiemHP.namehp_input = namehp;
                 DiemHP.sotinchi_input = sotinchi;
                 DiemHP.diemQT_input = diemQT;
@@ -69,11 +70,11 @@ namespace DiemHpQNU
                    
                 }
                 else
-                    MessageBox.Show("Tên học phần không được để trống");
+                    MessageBox.Show("Tên học phần không được để trống", "Lỗi nhập liệu", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch 
             {
-                MessageBox.Show("Lỗi định dạng khi nhập dữ liệu!");
+                MessageBox.Show("Lỗi định dạng khi nhập dữ liệu!", "Lỗi nhập liệu", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 DiemHP.is_ok = false;
 
             }
@@ -86,6 +87,8 @@ namespace DiemHpQNU
 
         private void themhp_Load(object sender, EventArgs e)
         {
+            button1.Enabled = false;
+            //button2.Enabled = false;
             DiemHP.is_ok = false;
             namehp_tb.Select();
             heso_combo.SelectedIndex = 1;
@@ -99,14 +102,14 @@ namespace DiemHpQNU
             {
                 if (float.Parse(diemquatrinh_tb.Text) < 0 || float.Parse(diemquatrinh_tb.Text) > 10)
                 {
-                    MessageBox.Show("Điểm quá trình không được nhỏ hơn 0 và lớn hơn 10");
+                    MessageBox.Show("Điểm quá trình không được nhỏ hơn 0 và lớn hơn 10", "Lỗi nhập liệu", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     diemquatrinh_tb.Text = "0";
                     diemquatrinh_tb.Select();
                 }
             }
             catch
             {
-                MessageBox.Show("Điểm quá trình nhập sai định dạng!");
+                MessageBox.Show("Điểm quá trình nhập sai định dạng!", "Lỗi nhập liệu", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 diemquatrinh_tb.Text = "0";
                 diemquatrinh_tb.Select();
             }
@@ -119,14 +122,14 @@ namespace DiemHpQNU
             {
                 if (float.Parse(diemck_tb.Text) < 0 || float.Parse(diemck_tb.Text) > 10)
                 {
-                    MessageBox.Show("Điểm cuối kỳ không được nhỏ hơn 0 và lớn hơn 10");
+                    MessageBox.Show("Điểm cuối kỳ không được nhỏ hơn 0 và lớn hơn 10", "Lỗi nhập liệu", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     diemck_tb.Text = "0";
                     diemck_tb.Select();
                 }
             }
             catch
             {
-                MessageBox.Show("Điểm cuối kỳ nhập sai định dạng!");
+                MessageBox.Show("Điểm cuối kỳ nhập sai định dạng!","Lỗi nhập liệu", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 diemck_tb.Text = "0";
                 diemck_tb.Select();
             }
@@ -148,7 +151,7 @@ namespace DiemHpQNU
         {
             if(sotc_numric.Value <= 0)
             {
-                MessageBox.Show("Số tín chỉ phải lớn hơn 0");
+                MessageBox.Show("Số tín chỉ phải lớn hơn 0", "Lỗi nhập liệu", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 sotc_numric.Value = 1;
             }
         }
@@ -197,8 +200,7 @@ namespace DiemHpQNU
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Controls.Clear();
-            this.InitializeComponent();
+            this.Close();
         }
 
         private void heso_combo_Leave(object sender, EventArgs e)
@@ -210,12 +212,23 @@ namespace DiemHpQNU
         {
             if (namehp_tb.Text == "")
             {
-                MessageBox.Show("Tên học phần không được bỏ trống");
+                //MessageBox.Show("Tên học phần không được bỏ trống");
                 DiemHP.is_ok = false;
             }
-                
+        }
 
-
+        private void namehp_tb_TextChanged(object sender, EventArgs e)
+        {
+            if(namehp_tb.Text != "")
+            {
+                button1.Enabled = true;
+                //button2.Enabled = true;
+            }
+            else
+            {
+                button1.Enabled=false;
+                //button2.Enabled=false;
+            }
         }
     }
     // BẢN QUYỀN THUỘC NGUYỄN KHÁNH DƯƠNG - 4651050044- NHÓM KLEENAHIDA[CNTT K46D]

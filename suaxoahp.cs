@@ -26,6 +26,8 @@ namespace DiemHpQNU
         }
         private void suaxoahp_Load(object sender, EventArgs e)
         {
+            button1.Enabled = false;
+            button2.Enabled = false;
             for (int i = 0; i < DiemHP.total_hp; i++)
             {
                 hocphan_cb.Items.Add(DiemHP.list_hp[i].ToString());
@@ -170,7 +172,8 @@ namespace DiemHpQNU
                 }
                 else if (heso_combo.SelectedIndex == 1) { precent_ck = 0.6F; }
                 else if (heso_combo.SelectedIndex == 2) { precent_ck = 0.7F; }
-
+                else if (heso_combo.SelectedIndex == 3) { precent_ck = 0.3F; }
+                else if (heso_combo.SelectedIndex == 4) { precent_ck = 0.4F; }
                 //DiemHP.namehp_input = namehp;
                 DiemHP.sotinchi_input = sotinchi;
                 DiemHP.diemQT_input = diemQT;
@@ -204,6 +207,37 @@ namespace DiemHpQNU
             {
                 MessageBox.Show("Bạn chưa chọn phần tử cần xoá");
             }
+
+        }
+
+        private void hocphan_cb_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void hocphan_cb_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (hocphan_cb.SelectedIndex == -1)
+            {
+                button1.Enabled = false;
+                button2.Enabled = false;
+            }
+            else
+            {
+                button1.Enabled = true;
+                button2.Enabled = true;
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            DiemHP.is_ok = true;
+            DiemHP.modify_mode=3;
+            this.Close();
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
 
         }
     }

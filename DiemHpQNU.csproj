@@ -39,7 +39,7 @@
     <WarningLevel>5</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x86</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -88,6 +88,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="gioithieusanpham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gioithieusanpham.Designer.cs">
+      <DependentUpon>gioithieusanpham.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="suaxoahp.cs">
@@ -104,6 +110,9 @@
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gioithieusanpham.resx">
+      <DependentUpon>gioithieusanpham.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -149,6 +158,39 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\add3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\open.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\save2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\cacel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\f1fbf23b2307cec772995f48436c2f02.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\pngtree-minimalistic-blue-honeycomb-technology-background-picture-image_1085284.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\7bcc2fce4836eb9b842149271804f1db.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\istockphoto-1369372299-612x612.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -39,15 +39,15 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.heso_combo = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.sotc_numric)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label1.Location = new System.Drawing.Point(24, 27);
             this.label1.Name = "label1";
@@ -62,12 +62,14 @@
             this.namehp_tb.Name = "namehp_tb";
             this.namehp_tb.Size = new System.Drawing.Size(334, 26);
             this.namehp_tb.TabIndex = 1;
+            this.namehp_tb.TextChanged += new System.EventHandler(this.namehp_tb_TextChanged);
             this.namehp_tb.KeyDown += new System.Windows.Forms.KeyEventHandler(this.namehp_tb_KeyDown);
             this.namehp_tb.Leave += new System.EventHandler(this.namehp_tb_Leave);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label2.Location = new System.Drawing.Point(24, 74);
             this.label2.Name = "label2";
@@ -93,6 +95,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label3.Location = new System.Drawing.Point(25, 117);
             this.label3.Name = "label3";
@@ -115,6 +118,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label4.Location = new System.Drawing.Point(96, 120);
             this.label4.Name = "label4";
@@ -138,6 +142,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label5.Location = new System.Drawing.Point(301, 120);
             this.label5.Name = "label5";
@@ -149,6 +154,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label6.Location = new System.Drawing.Point(25, 160);
             this.label6.Name = "label6";
@@ -158,56 +164,57 @@
             // 
             // heso_combo
             // 
+            this.heso_combo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.heso_combo.FormattingEnabled = true;
             this.heso_combo.Items.AddRange(new object[] {
             "5-5 (50% giữa kỳ, 50% cuối kỳ)",
             "4-6 (40% giữa kỳ, 60% cuối kỳ)",
-            "3-7 (30% giữa kỳ, 70% cuối kỳ)"});
-            this.heso_combo.Location = new System.Drawing.Point(112, 162);
+            "3-7 (30% giữa kỳ, 70% cuối kỳ)",
+            "7-3 (70% giữa kỳ, 30% cuối kỳ)",
+            "6-4 (60% giữa kỳ, 40% cuối kỳ)"});
+            this.heso_combo.Location = new System.Drawing.Point(100, 157);
             this.heso_combo.Name = "heso_combo";
-            this.heso_combo.Size = new System.Drawing.Size(184, 21);
+            this.heso_combo.Size = new System.Drawing.Size(265, 28);
             this.heso_combo.TabIndex = 3;
             this.heso_combo.Text = "(Vui lòng chọn hệ số ...)";
             this.heso_combo.KeyDown += new System.Windows.Forms.KeyEventHandler(this.heso_combo_KeyDown);
             this.heso_combo.Leave += new System.EventHandler(this.heso_combo_Leave);
             // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.button1.Location = new System.Drawing.Point(529, 24);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(120, 49);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Thêm";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.button2.Location = new System.Drawing.Point(529, 88);
+            this.button2.Image = global::DiemHpQNU.Properties.Resources.cacel;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(519, 102);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(120, 49);
+            this.button2.Size = new System.Drawing.Size(124, 57);
             this.button2.TabIndex = 4;
-            this.button2.Text = "Huỷ";
+            this.button2.Text = "Huỷ bỏ";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // label7
+            // button1
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(419, 184);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(245, 13);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "@YangKlee2024-Rel-Beta<Build: 060420241415>";
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.button1.Image = global::DiemHpQNU.Properties.Resources.add3;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(519, 24);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(124, 70);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Thêm HP";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // themhp
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.BackgroundImage = global::DiemHpQNU.Properties.Resources.istockphoto_1369372299_612x612;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(676, 206);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.heso_combo);
@@ -221,6 +228,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
             this.Name = "themhp";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -247,6 +255,5 @@
         private System.Windows.Forms.ComboBox heso_combo;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label7;
     }
 }

@@ -30,11 +30,14 @@ namespace DiemHpQNU
             float sum = 0;
             float avg_hocky4 = 0;
             float sum4 = 0;
-
+            bool ck_duoi5 = false;
             total_tc = 0;
             for (int i = 0; i < total_hp; i++)
             {
-                
+                if (float.Parse(point_table.Rows[i].Cells[3].Value.ToString()) <= 5)
+                {
+                    ck_duoi5 = true;
+                }
                 sum += float.Parse(point_table.Rows[i].Cells[4].Value.ToString()) * 
                     float.Parse(point_table.Rows[i].Cells[1].Value.ToString());
                 sum4 += float.Parse(point_table.Rows[i].Cells[5].Value.ToString()) *
@@ -43,9 +46,24 @@ namespace DiemHpQNU
                 total_tc += int.Parse(point_table.Rows[i].Cells[1].Value.ToString());
             }
             int chisohocluc = 0;
+            if (sum != 0 || total_tc != 0)
+            {
+                avg_hocky = sum / (float)total_tc;
 
-            avg_hocky = sum /(float) total_tc;
-            avg_hocky4 = sum4 / (float)total_tc;
+            }
+            else
+            {
+                avg_hocky = 0;
+            }
+            if (sum4 != 0 || total_tc != 0)
+            {
+                avg_hocky4 = sum4 / (float)total_tc;
+            }
+            else
+            {
+                avg_hocky4 = 0;
+            }
+            
             if (avg_hocky4 >= 3.6)
                 chisohocluc = 5;
             else if(avg_hocky4 < 3.6 && avg_hocky4 >= 3.2)
@@ -59,9 +77,13 @@ namespace DiemHpQNU
             else if (avg_hocky4 <1)
                 chisohocluc = 0;
             label1.Text = "Tổng số TC: " + total_tc + '\n' +
-                "Điểm TB học kỳ:(hệ 4): " + avg_hocky4 + " \n" +
-                "Điểm TB học kỳ:(hệ 10): " + avg_hocky + "\n" +
+                "Điểm TB học kỳ:(hệ 4): " + avg_hocky4.ToString("F2") + " \n" +
+                "Điểm TB học kỳ:(hệ 10): " + avg_hocky.ToString("F2") + "\n" +
                 "Xếp loại học lực: " + xlhocluc[chisohocluc];
+            if(avg_hocky >= 7 &&  ck_duoi5 == false && total_tc >= 15 )
+            {
+                label1.Text += "\nBạn đủ điều kiện xét học bổng";
+            }
         }
         public static string namehp_input;
         public static int sotinchi_input;
@@ -164,10 +186,14 @@ namespace DiemHpQNU
         }
         void reset_all()
         {
-            //point_table.Rows.Clear();
             this.Controls.Clear();
             this.InitializeComponent();
+            total_tc  = 0;
+            total_hp = 0;
 
+            config_ui();
+            point_table.Rows.Clear();
+            //point_table.Rows.Clear();
 
         }
         private void add_bt_Click(object sender, EventArgs e)
@@ -178,8 +204,8 @@ namespace DiemHpQNU
             {
                 //MessageBox.Show("Import dữ liệu thành công");
                 point_table.Rows.Add(namehp_input, sotinchi_input, diemQT_input, diemCK_input,
-                    TinhdiemHP(diemQT_input, diemCK_input, precent_ck_input),
-                    DoiDiem4(TinhdiemHP(diemQT_input, diemCK_input, precent_ck_input)),
+                    TinhdiemHP(diemQT_input, diemCK_input, precent_ck_input).ToString("F2"),
+                    DoiDiem4(TinhdiemHP(diemQT_input, diemCK_input, precent_ck_input)).ToString("F2"),
                     DoiDiemChu(TinhdiemHP(diemQT_input, diemCK_input, precent_ck_input)), 
                     Check_Pass(TinhdiemHP(diemQT_input, diemCK_input, precent_ck_input)));
                 //total_tc += sotinchi_input;
@@ -216,8 +242,8 @@ namespace DiemHpQNU
             if(is_ok == true && modify_mode == 1 && index_update != -1)
             {
                 point_table.Rows[index_update].SetValues(list_hp[index_update], sotinchi_input, diemQT_input, diemCK_input,
-                    TinhdiemHP(diemQT_input, diemCK_input, precent_ck_input),
-                    DoiDiem4(TinhdiemHP(diemQT_input, diemCK_input, precent_ck_input)),
+                    TinhdiemHP(diemQT_input, diemCK_input, precent_ck_input).ToString("F2"),
+                    DoiDiem4(TinhdiemHP(diemQT_input, diemCK_input, precent_ck_input)).ToString("F2"),
                     DoiDiemChu(TinhdiemHP(diemQT_input, diemCK_input, precent_ck_input)),
                     Check_Pass(TinhdiemHP(diemQT_input, diemCK_input, precent_ck_input)));
                 //total_tc += sotinchi_input-  total_tc ;
@@ -230,6 +256,10 @@ namespace DiemHpQNU
                 total_hp--;
                 caluate_point();
 
+            }
+            else if(is_ok == true && modify_mode == 3)
+            {
+                MessageBox.Show("Đã huỷ!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -329,6 +359,7 @@ namespace DiemHpQNU
                             total_hp = num;
   
                         }
+                        config_ui();
                         caluate_point();
                     }
                     catch
@@ -345,6 +376,12 @@ namespace DiemHpQNU
 
             }
 
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            gioithieusanpham gioithieu = new gioithieusanpham();
+            gioithieu.Show();
         }
     }
     // BẢN QUYỀN THUỘC NGUYỄN KHÁNH DƯƠNG - 4651050044- NHÓM KLEENAHIDA[CNTT K46D]

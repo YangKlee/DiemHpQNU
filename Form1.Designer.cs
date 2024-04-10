@@ -40,20 +40,21 @@
             this.DiemHKChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.KetQua = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
-            this.add_bt = new System.Windows.Forms.Button();
-            this.modify_bt = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.save_bt = new System.Windows.Forms.Button();
-            this.import_bt = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.label2 = new System.Windows.Forms.Label();
+            this.import_bt = new System.Windows.Forms.Button();
+            this.save_bt = new System.Windows.Forms.Button();
+            this.modify_bt = new System.Windows.Forms.Button();
+            this.add_bt = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.point_table)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lb1
             // 
+            this.lb1.BackColor = System.Drawing.Color.Transparent;
             this.lb1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lb1.ForeColor = System.Drawing.Color.Red;
             this.lb1.Location = new System.Drawing.Point(1, 108);
@@ -65,6 +66,7 @@
             // 
             // point_table
             // 
+            this.point_table.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
             this.point_table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.point_table.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.NameHP,
@@ -82,6 +84,7 @@
             // 
             // NameHP
             // 
+            this.NameHP.Frozen = true;
             this.NameHP.HeaderText = "Tên học phần";
             this.NameHP.Name = "NameHP";
             this.NameHP.ReadOnly = true;
@@ -89,6 +92,7 @@
             // 
             // SoTC
             // 
+            this.SoTC.Frozen = true;
             this.SoTC.HeaderText = "Số tín chỉ";
             this.SoTC.Name = "SoTC";
             this.SoTC.ReadOnly = true;
@@ -96,6 +100,7 @@
             // 
             // DiemQT
             // 
+            this.DiemQT.Frozen = true;
             this.DiemQT.HeaderText = "Điểm QT";
             this.DiemQT.Name = "DiemQT";
             this.DiemQT.ReadOnly = true;
@@ -103,6 +108,7 @@
             // 
             // DiemCK
             // 
+            this.DiemCK.Frozen = true;
             this.DiemCK.HeaderText = "Điểm CK";
             this.DiemCK.Name = "DiemCK";
             this.DiemCK.ReadOnly = true;
@@ -110,6 +116,7 @@
             // 
             // DiemTK
             // 
+            this.DiemTK.Frozen = true;
             this.DiemTK.HeaderText = "Điểm HP";
             this.DiemTK.Name = "DiemTK";
             this.DiemTK.ReadOnly = true;
@@ -117,6 +124,7 @@
             // 
             // DiemHK4
             // 
+            this.DiemHK4.Frozen = true;
             this.DiemHK4.HeaderText = "Điểm HP(Hệ 4)";
             this.DiemHK4.Name = "DiemHK4";
             this.DiemHK4.Width = 80;
@@ -125,6 +133,7 @@
             // 
             this.DiemHKChu.HeaderText = "Điểm chữ";
             this.DiemHKChu.Name = "DiemHKChu";
+            this.DiemHKChu.ReadOnly = true;
             this.DiemHKChu.Width = 50;
             // 
             // KetQua
@@ -136,39 +145,90 @@
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label1.Location = new System.Drawing.Point(12, 480);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label1.Location = new System.Drawing.Point(16, 480);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(297, 99);
+            this.label1.Size = new System.Drawing.Size(746, 99);
             this.label1.TabIndex = 3;
             this.label1.Text = "Tổng số TC: 0\r\nĐiểm TB học kỳ (hệ 4): 0\r\nĐiểm TB học kỳ (hệ 10): 0\r\nXếp loại học " +
     "lực: -";
             // 
-            // add_bt
+            // openFileDialog1
             // 
-            this.add_bt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.add_bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.add_bt.Location = new System.Drawing.Point(785, 167);
-            this.add_bt.Name = "add_bt";
-            this.add_bt.Size = new System.Drawing.Size(126, 67);
-            this.add_bt.TabIndex = 4;
-            this.add_bt.Text = "Thêm HP";
-            this.add_bt.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.add_bt.UseVisualStyleBackColor = true;
-            this.add_bt.Click += new System.EventHandler(this.add_bt_Click);
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label2.Location = new System.Drawing.Point(702, 566);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(220, 13);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "@YangKlee2024-Rel<Build: 100420241500>";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // import_bt
+            // 
+            this.import_bt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.import_bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.import_bt.Image = global::DiemHpQNU.Properties.Resources.save2;
+            this.import_bt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.import_bt.Location = new System.Drawing.Point(781, 391);
+            this.import_bt.Name = "import_bt";
+            this.import_bt.Size = new System.Drawing.Size(137, 67);
+            this.import_bt.TabIndex = 4;
+            this.import_bt.Text = "Nhập điểm";
+            this.import_bt.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.import_bt.UseVisualStyleBackColor = true;
+            this.import_bt.Click += new System.EventHandler(this.import_bt_Click);
+            // 
+            // save_bt
+            // 
+            this.save_bt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.save_bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.save_bt.Image = global::DiemHpQNU.Properties.Resources.save;
+            this.save_bt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.save_bt.Location = new System.Drawing.Point(781, 318);
+            this.save_bt.Name = "save_bt";
+            this.save_bt.Size = new System.Drawing.Size(137, 67);
+            this.save_bt.TabIndex = 4;
+            this.save_bt.Text = "Lưu điểm";
+            this.save_bt.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.save_bt.UseVisualStyleBackColor = true;
+            this.save_bt.Click += new System.EventHandler(this.save_bt_Click);
             // 
             // modify_bt
             // 
             this.modify_bt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.modify_bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.modify_bt.Location = new System.Drawing.Point(785, 240);
+            this.modify_bt.Image = global::DiemHpQNU.Properties.Resources.edit;
+            this.modify_bt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.modify_bt.Location = new System.Drawing.Point(781, 245);
             this.modify_bt.Name = "modify_bt";
-            this.modify_bt.Size = new System.Drawing.Size(126, 67);
+            this.modify_bt.Size = new System.Drawing.Size(137, 67);
             this.modify_bt.TabIndex = 4;
-            this.modify_bt.Text = "Sửa, xoá HP";
-            this.modify_bt.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.modify_bt.Text = "Sửa, xoá";
+            this.modify_bt.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.modify_bt.UseVisualStyleBackColor = true;
             this.modify_bt.Click += new System.EventHandler(this.modify_bt_Click);
+            // 
+            // add_bt
+            // 
+            this.add_bt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.add_bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.add_bt.Image = global::DiemHpQNU.Properties.Resources.add3;
+            this.add_bt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.add_bt.Location = new System.Drawing.Point(781, 172);
+            this.add_bt.Name = "add_bt";
+            this.add_bt.Size = new System.Drawing.Size(137, 67);
+            this.add_bt.TabIndex = 4;
+            this.add_bt.Text = "Thêm HP";
+            this.add_bt.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.add_bt.UseVisualStyleBackColor = true;
+            this.add_bt.Click += new System.EventHandler(this.add_bt_Click);
             // 
             // pictureBox1
             // 
@@ -180,49 +240,12 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // save_bt
-            // 
-            this.save_bt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.save_bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.save_bt.Location = new System.Drawing.Point(785, 313);
-            this.save_bt.Name = "save_bt";
-            this.save_bt.Size = new System.Drawing.Size(126, 67);
-            this.save_bt.TabIndex = 4;
-            this.save_bt.Text = "Lưu điểm";
-            this.save_bt.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.save_bt.UseVisualStyleBackColor = true;
-            this.save_bt.Click += new System.EventHandler(this.save_bt_Click);
-            // 
-            // import_bt
-            // 
-            this.import_bt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.import_bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.import_bt.Location = new System.Drawing.Point(785, 386);
-            this.import_bt.Name = "import_bt";
-            this.import_bt.Size = new System.Drawing.Size(126, 67);
-            this.import_bt.TabIndex = 4;
-            this.import_bt.Text = "Nhập điểm";
-            this.import_bt.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.import_bt.UseVisualStyleBackColor = true;
-            this.import_bt.Click += new System.EventHandler(this.import_bt_Click);
-            // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(677, 566);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(245, 13);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "@YangKlee2024-Rel-Beta<Build: 060420241415>";
-            // 
             // DiemHP
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.BackgroundImage = global::DiemHpQNU.Properties.Resources.pngtree_minimalistic_blue_honeycomb_technology_background_picture_image_1085284;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(934, 588);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.import_bt);
@@ -233,8 +256,10 @@
             this.Controls.Add(this.point_table);
             this.Controls.Add(this.lb1);
             this.Controls.Add(this.pictureBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
             this.Name = "DiemHP";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Phần mềm tính điểm học phần";
             this.Load += new System.EventHandler(this.DiemHP_Load);
             ((System.ComponentModel.ISupportInitialize)(this.point_table)).EndInit();
@@ -252,6 +277,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button add_bt;
         private System.Windows.Forms.Button modify_bt;
+        private System.Windows.Forms.Button save_bt;
+        private System.Windows.Forms.Button import_bt;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridViewTextBoxColumn NameHP;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoTC;
         private System.Windows.Forms.DataGridViewTextBoxColumn DiemQT;
@@ -260,11 +290,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn DiemHK4;
         private System.Windows.Forms.DataGridViewTextBoxColumn DiemHKChu;
         private System.Windows.Forms.DataGridViewCheckBoxColumn KetQua;
-        private System.Windows.Forms.Button save_bt;
-        private System.Windows.Forms.Button import_bt;
-        private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
-        private System.Windows.Forms.Label label2;
     }
 }
 
