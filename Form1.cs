@@ -121,7 +121,7 @@ namespace DiemHpQNU
             {
                 return 3.5F;
             }
-            else if (n >= 9 && n <= 10)
+            else if (n >= 9)
             {
                 return 4F;
             }
@@ -153,7 +153,7 @@ namespace DiemHpQNU
             {
                 return "A";
             }
-            else if (n >= 9 && n <= 10)
+            else if (n >= 9)
             {
                 return "A+";
             }
@@ -162,13 +162,14 @@ namespace DiemHpQNU
         }
         bool Check_Pass(float Diem_HP)
         {
-            if (Diem_HP <= 4)
+            
+            if (Diem_HP >= 4) 
             {
-                return false;
+                return true;
             }
             else
             {
-                return true;
+                return false;
             }
         }
         void config_ui()

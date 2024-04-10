@@ -3,18 +3,30 @@
   "WorkspaceRootPath": "D:\\DiemHpQNU\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|DiemHpQNU||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+      "AbsoluteMoniker": "D:0:0:{7BDFEBA7-94CD-44CB-B603-804887A6BE1F}|DiemHpQNU.csproj|d:\\diemhpqnu\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7BDFEBA7-94CD-44CB-B603-804887A6BE1F}|DiemHpQNU.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7BDFEBA7-94CD-44CB-B603-804887A6BE1F}|DiemHpQNU.csproj|d:\\diemhpqnu\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7BDFEBA7-94CD-44CB-B603-804887A6BE1F}|DiemHpQNU.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{7BDFEBA7-94CD-44CB-B603-804887A6BE1F}|DiemHpQNU.csproj|D:\\DiemHpQNU\\themhp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7BDFEBA7-94CD-44CB-B603-804887A6BE1F}|DiemHpQNU.csproj|solutionrelative:themhp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7BDFEBA7-94CD-44CB-B603-804887A6BE1F}|DiemHpQNU.csproj|D:\\DiemHpQNU\\themhp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{7BDFEBA7-94CD-44CB-B603-804887A6BE1F}|DiemHpQNU.csproj|solutionrelative:themhp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7BDFEBA7-94CD-44CB-B603-804887A6BE1F}|DiemHpQNU.csproj|d:\\diemhpqnu\\gioithieusanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7BDFEBA7-94CD-44CB-B603-804887A6BE1F}|DiemHpQNU.csproj|D:\\DiemHpQNU\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7BDFEBA7-94CD-44CB-B603-804887A6BE1F}|DiemHpQNU.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|DiemHpQNU||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7BDFEBA7-94CD-44CB-B603-804887A6BE1F}|DiemHpQNU.csproj|D:\\DiemHpQNU\\gioithieusanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7BDFEBA7-94CD-44CB-B603-804887A6BE1F}|DiemHpQNU.csproj|solutionrelative:gioithieusanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7BDFEBA7-94CD-44CB-B603-804887A6BE1F}|DiemHpQNU.csproj|D:\\DiemHpQNU\\gioithieusanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7BDFEBA7-94CD-44CB-B603-804887A6BE1F}|DiemHpQNU.csproj|solutionrelative:gioithieusanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -24,21 +36,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{7BDFEBA7-94CD-44CB-B603-804887A6BE1F}|DiemHpQNU.csproj|D:\\DiemHpQNU\\suaxoahp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7BDFEBA7-94CD-44CB-B603-804887A6BE1F}|DiemHpQNU.csproj|solutionrelative:suaxoahp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7BDFEBA7-94CD-44CB-B603-804887A6BE1F}|DiemHpQNU.csproj|D:\\DiemHpQNU\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7BDFEBA7-94CD-44CB-B603-804887A6BE1F}|DiemHpQNU.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7BDFEBA7-94CD-44CB-B603-804887A6BE1F}|DiemHpQNU.csproj|D:\\DiemHpQNU\\themhp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7BDFEBA7-94CD-44CB-B603-804887A6BE1F}|DiemHpQNU.csproj|solutionrelative:themhp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7BDFEBA7-94CD-44CB-B603-804887A6BE1F}|DiemHpQNU.csproj|d:\\diemhpqnu\\gioithieusanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7BDFEBA7-94CD-44CB-B603-804887A6BE1F}|DiemHpQNU.csproj|solutionrelative:gioithieusanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7BDFEBA7-94CD-44CB-B603-804887A6BE1F}|DiemHpQNU.csproj|d:\\diemhpqnu\\||{B270807C-D8C6-49EB-8EBE-8E8D566637A1}|5e9a8ac2-4f34-4521-858f-4c248ba31532"
     }
   ],
   "DocumentGroupContainers": [
@@ -48,7 +45,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
@@ -60,25 +57,11 @@
               "RelativeToolTip": "themhp.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-29T06:47:51.696Z",
-              "IsPinned": true,
-              "EditorCaption": " [Design]"
+              "IsPinned": true
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "D:\\DiemHpQNU\\Form1.cs",
-              "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "D:\\DiemHpQNU\\Form1.cs [Design]",
-              "RelativeToolTip": "Form1.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-29T06:27:55.019Z",
-              "IsPinned": true,
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
               "Title": "themhp.cs",
               "DocumentMoniker": "D:\\DiemHpQNU\\themhp.cs",
               "RelativeDocumentMoniker": "themhp.cs",
@@ -87,18 +70,17 @@
               "ViewState": "AQIAAIYAAAAAAAAAAAAuwJ4AAABFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-29T06:57:04.065Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 0,
               "Title": "Form1.cs",
               "DocumentMoniker": "D:\\DiemHpQNU\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
               "ToolTip": "D:\\DiemHpQNU\\Form1.cs",
               "RelativeToolTip": "Form1.cs",
-              "ViewState": "AQIAAHABAAAAAAAAAAAYwH8BAAAdAAAA",
+              "ViewState": "AQIAAJgAAAAAAAAAAAAswKQAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-29T06:43:33.265Z",
               "IsPinned": true,
@@ -106,7 +88,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "suaxoahp.cs",
               "DocumentMoniker": "D:\\DiemHpQNU\\suaxoahp.cs",
               "RelativeDocumentMoniker": "suaxoahp.cs",
@@ -115,12 +97,11 @@
               "ViewState": "AQIAAOMAAAAAAAAAAAAAwPAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-02T12:33:46.5Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "suaxoahp.cs [Design]",
               "DocumentMoniker": "D:\\DiemHpQNU\\suaxoahp.cs",
               "RelativeDocumentMoniker": "suaxoahp.cs",
@@ -128,24 +109,44 @@
               "RelativeToolTip": "suaxoahp.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-02T12:28:06.543Z",
-              "IsPinned": true,
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "DiemHpQNU",
-              "DocumentMoniker": "D:\\DIEMHPQNU\\DiemHpQNU.csproj",
-              "RelativeDocumentMoniker": "DiemHpQNU.csproj",
-              "ToolTip": "D:\\DIEMHPQNU\\DiemHpQNU.csproj*",
-              "RelativeToolTip": "DiemHpQNU.csproj*",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-04-10T08:09:33.579Z",
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "D:\\DiemHpQNU\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "D:\\DiemHpQNU\\Form1.cs [Design]",
+              "RelativeToolTip": "Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-29T06:27:55.019Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "gioithieusanpham.cs [Design]",
+              "DocumentMoniker": "D:\\DiemHpQNU\\gioithieusanpham.cs",
+              "RelativeDocumentMoniker": "gioithieusanpham.cs",
+              "ToolTip": "D:\\DiemHpQNU\\gioithieusanpham.cs [Design]",
+              "RelativeToolTip": "gioithieusanpham.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-10T07:46:07.124Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DiemHpQNU",
+              "DocumentMoniker": "D:\\DiemHpQNU\\DiemHpQNU.csproj",
+              "RelativeDocumentMoniker": "DiemHpQNU.csproj",
+              "ToolTip": "D:\\DiemHpQNU\\DiemHpQNU.csproj",
+              "RelativeToolTip": "DiemHpQNU.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-04-10T08:09:33.579Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "gioithieusanpham.cs",
               "DocumentMoniker": "D:\\DiemHpQNU\\gioithieusanpham.cs",
               "RelativeDocumentMoniker": "gioithieusanpham.cs",
@@ -153,20 +154,7 @@
               "RelativeToolTip": "gioithieusanpham.cs",
               "ViewState": "AQIAAAkAAAAAAAAAAAAAAB8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-10T08:05:06.755Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "gioithieusanpham.cs [Design]",
-              "DocumentMoniker": "D:\\DiemHpQNU\\gioithieusanpham.cs",
-              "RelativeDocumentMoniker": "gioithieusanpham.cs",
-              "ToolTip": "D:\\DiemHpQNU\\gioithieusanpham.cs [Design]",
-              "RelativeToolTip": "gioithieusanpham.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-10T07:46:07.124Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-04-10T08:05:06.755Z"
             }
           ]
         }
