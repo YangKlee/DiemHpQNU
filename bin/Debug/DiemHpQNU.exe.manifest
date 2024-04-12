@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DiemHpQNU.exe" size="376320">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DiemHpQNU.exe" size="343040">
       <assemblyIdentity name="DiemHpQNU" version="1.0.0.0" language="neutral" processorArchitecture="amd64" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>XJa0088R4SHlvV3GZmTsC+Ywuz3n3o0BKo7njHwI02E=</dsig:DigestValue>
+        <dsig:DigestValue>vHKRRJ505y4COrzAABTCJ2sapIsOjskCAIoa/JIOFJg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

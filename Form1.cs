@@ -19,13 +19,15 @@ namespace DiemHpQNU
         public static int total_hp = 0;
         int total_tc_fail = 0;
         float avg_point = 0;
-        string[] xlhocluc = { "Kém" , "Yếu", "Trung bình", "Khá", "Giỏi", "Xuất xắc"};
+        string[] xlhocluc = { "Kém" , "Yếu", "Trung bình", "Khá", "Giỏi", "Xuất xắc", "-"};
+        
         public DiemHP()
         {
             InitializeComponent();
         }
         void caluate_point()
         {
+            System.IO.File.AppendAllText("log.txt", "caluate_point\n");
             float avg_hocky = 0;
             float sum = 0;
             float avg_hocky4 = 0;
@@ -74,8 +76,10 @@ namespace DiemHpQNU
                 chisohocluc = 2;
             else if (avg_hocky4 < 2.0 && avg_hocky4 >= 1.0)
                 chisohocluc = 1;
-            else if (avg_hocky4 <1)
+            else if (avg_hocky4 <1 && total_tc != 0)
                 chisohocluc = 0;
+            else if(total_tc == 0)
+                chisohocluc = 6;
             label1.Text = "Tổng số TC: " + total_tc + '\n' +
                 "Điểm TB học kỳ:(hệ 4): " + avg_hocky4.ToString("F2") + " \n" +
                 "Điểm TB học kỳ:(hệ 10): " + avg_hocky.ToString("F2") + "\n" +
@@ -84,6 +88,7 @@ namespace DiemHpQNU
             {
                 label1.Text += "\nBạn đủ điều kiện xét học bổng";
             }
+            System.IO.File.AppendAllText("log.txt", "Caluate Values: \n"+ total_hp+ total_tc + avg_hocky + avg_hocky4 + xlhocluc[chisohocluc]+ '\n');
         }
         public static string namehp_input;
         public static int sotinchi_input;
@@ -174,6 +179,7 @@ namespace DiemHpQNU
         }
         void config_ui()
         {
+            System.IO.File.AppendAllText("log.txt", "Config_UI: total hp: " + total_hp+ '\n');
             if (total_hp == 0)
             {
                 modify_bt.Enabled = false;
@@ -187,18 +193,21 @@ namespace DiemHpQNU
         }
         void reset_all()
         {
-            this.Controls.Clear();
-            this.InitializeComponent();
+            System.IO.File.AppendAllText("log.txt", "Reset alll \n");
+            //this.Controls.Clear();
+            //this.InitializeComponent();
             total_tc  = 0;
             total_hp = 0;
-
-            config_ui();
             point_table.Rows.Clear();
+            caluate_point();
+            config_ui();
+            //point_table.Rows.Clear();
             //point_table.Rows.Clear();
 
         }
         private void add_bt_Click(object sender, EventArgs e)
         {
+            System.IO.File.AppendAllText("log.txt", "add_hocphan\n");
             themhp themhp = new themhp();
             themhp.ShowDialog();
             if (is_ok)
@@ -212,11 +221,13 @@ namespace DiemHpQNU
                 //total_tc += sotinchi_input;
                 total_hp++;
                 caluate_point();
+                System.IO.File.AppendAllText("log.txt", "Add hp complete\n");
             }
             else
             {
                 MessageBox.Show("Đã huỷ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                
+                System.IO.File.AppendAllText("log.txt", "Add hp cacel\n");
+
             }
             config_ui();
 
@@ -236,9 +247,11 @@ namespace DiemHpQNU
             for(int i = 0; i < total_hp; i++)
             {
                 list_hp.Add(point_table.Rows[i].Cells[0].Value.ToString());
+                System.IO.File.AppendAllText("log.txt", "Import modify index complete\n");
                 //list_hp[i] =            
             }
             suaxoahp suaxoahp = new suaxoahp();
+            System.IO.File.AppendAllText("log.txt", "suaxoahp.ShowDialog()\n");
             suaxoahp.ShowDialog();
             if(is_ok == true && modify_mode == 1 && index_update != -1)
             {
@@ -247,6 +260,7 @@ namespace DiemHpQNU
                     DoiDiem4(TinhdiemHP(diemQT_input, diemCK_input, precent_ck_input)).ToString("F2"),
                     DoiDiemChu(TinhdiemHP(diemQT_input, diemCK_input, precent_ck_input)),
                     Check_Pass(TinhdiemHP(diemQT_input, diemCK_input, precent_ck_input)));
+                System.IO.File.AppendAllText("log.txt", "Modify_complete\n: Index: "+ index_update + '\n');
                 //total_tc += sotinchi_input-  total_tc ;
                 caluate_point();
             }
@@ -256,15 +270,16 @@ namespace DiemHpQNU
                 point_table.Rows.RemoveAt(index_update);
                 total_hp--;
                 caluate_point();
-
+                System.IO.File.AppendAllText("log.txt", "Delete complete\n: Index: " + index_update+ '\n');
             }
             else if(is_ok == true && modify_mode == 3)
             {
+                System.IO.File.AppendAllText("log.txt", "Cacel Complete\n");
                 MessageBox.Show("Đã huỷ!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                MessageBox.Show("Không nhận được tham số chỉ định");
+                MessageBox.Show("Không nhận được tham số chỉ định","Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             config_ui();
 
@@ -272,19 +287,23 @@ namespace DiemHpQNU
 
         private void DiemHP_Load(object sender, EventArgs e)
         {
+            System.IO.File.AppendAllText("log.txt", "DiemHPLoad\n");
             config_ui();
         }
         string url_file;
         private void save_bt_Click(object sender, EventArgs e)
         {
+            System.IO.File.AppendAllText("log.txt", "Save File()\n");
             saveFileDialog1.Title = "Chọn vị trí lưu file";
             saveFileDialog1.Filter = "QNU files (*.QNU)|*.qnu";
             saveFileDialog1.DefaultExt = "QNU";
+            //saveFileDialog1.FileNames = "<tên file>.QNU";
 
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 //MessageBox.Show(saveFileDialog1.FileName);
                 url_file = saveFileDialog1.FileName;
+                System.IO.File.AppendAllText("log.txt", "Location:\n"+ url_file);
                 try
                 {
                     System.IO.File.WriteAllText(url_file, total_hp.ToString() + "\n");
@@ -300,11 +319,14 @@ namespace DiemHpQNU
                             point_table.Rows[i].Cells[6].Value.ToString() + ';' +
                             point_table.Rows[i].Cells[7].Value.ToString() + '\n');
                     }
-                    MessageBox.Show("Lưu file thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Lưu điểm thành công!\nKhi muốn sử dụng lại" +
+                        "bạn có thể dùng tính năng Nhập điểm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    System.IO.File.AppendAllText("log.txt", "Save file complete\n");
                 }
                 catch
                 {
                     MessageBox.Show("Lưu file lỗi", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    System.IO.File.AppendAllText("log.txt", "Save file ERROR - Write ERROR\n");
                 }
             }
             else
@@ -316,19 +338,22 @@ namespace DiemHpQNU
         private void import_bt_Click(object sender, EventArgs e)
         {
             //MessageBox.Show("Tính năng này chưa được hoàn thiện!", "Cảnh báo!");
-
+            System.IO.File.AppendAllText("log.txt", "Read File()\n");
             //this.Close();
-            DialogResult drg_repply = MessageBox.Show("Khi nhập file, toàn bộ dữ liệu đang nhập sẽ bị xoá!. " +
+            DialogResult drg_repply = MessageBox.Show("Khi nhập điểm, toàn bộ dữ liệu chưa lưu sẽ bị xoá!. " +
                 "Bạn đồng ý chứ ?", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if(drg_repply == DialogResult.Yes)
             {
+                
                 reset_all();
                 openFileDialog1.Title = "Chọn file cần nhập:";
                 openFileDialog1.Filter = "QNU files (*.QNU)|*.qnu";
                 openFileDialog1.DefaultExt = "QNU";
+                openFileDialog1.FileName = "<Tên file>.QNU";
                 if (openFileDialog1.ShowDialog() == DialogResult.OK)
                 {
                     url_file = openFileDialog1.FileName;
+                    System.IO.File.AppendAllText("log.txt", "Location:\n" + url_file);
                     try
                     {
                      
@@ -351,21 +376,26 @@ namespace DiemHpQNU
                                     hp_import.Add(values[j]);
                                     //MessageBox.Show(values[j]);
                             }
+                            System.IO.File.AppendAllText("log.txt", "End of stream:\n" );
                             //MessageBox.Show(j.ToString());
-                            for(int i = 0; i < num; i++)
+                            for (int i = 0; i < num; i++)
                             {
+                                System.IO.File.AppendAllText("log.txt", "Import to table:"+ hp_import[i] +"\n");
                                 point_table.Rows[i].Cells[j].Value  = hp_import[i];
                             }
                             sr.Close();
                             total_hp = num;
-  
+
                         }
+                        MessageBox.Show("Đọc file thành công!");
+                        System.IO.File.AppendAllText("log.txt", "Read file complete\n");
                         config_ui();
                         caluate_point();
                     }
                     catch
                     {
                         MessageBox.Show("Đọc file lỗi, vui lòng xem file đúng định dạng hay chưa", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        System.IO.File.AppendAllText("log.txt", "Read file ERROR:\n");
                         reset_all();
                     }
 

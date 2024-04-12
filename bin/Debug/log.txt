@@ -1,0 +1,220 @@
+DiemHPLoad
+Config_UI: total hp: 0
+add_hocphan
+caluate_point
+Caluate Values: 
+11104Xuất xắcAdd hp complete
+Config_UI: total hp: 1
+add_hocphan
+caluate_point
+Caluate Values: 
+248,2453,25GiỏiAdd hp complete
+Config_UI: total hp: 2
+Import modify index complete
+Import modify index complete
+suaxoahp.ShowDialog()
+caluate_point
+Caluate Values: 
+11104Xuất xắcDelete complete
+: Index: 1
+Config_UI: total hp: 1
+Read File()
+Reset alll 
+caluate_point
+Caluate Values: 
+0000-Config_UI: total hp: 0
+Location:
+C:\Users\LENOVO\Desktop\diemtest.QNUEnd of stream:
+Import to table:Toán Logic
+Import to table:Lập trình cơ bản
+Import to table:Giải tích 1
+Import to table:Rắp ráp máy tín3
+Import to table:Tiếng anh 1
+Import to table:Xác chết thống kê
+Read file ERROR:
+Reset alll 
+caluate_point
+Caluate Values: 
+0000-Config_UI: total hp: 0
+Read File()
+Reset alll 
+caluate_point
+Caluate Values: 
+0000-Config_UI: total hp: 0
+Location:
+C:\Users\LENOVO\Desktop\test.QNUEnd of stream:
+Import to table:Toán Logic
+Read file complete
+End of stream:
+Import to table:3
+Read file complete
+End of stream:
+Import to table:7,5
+Read file complete
+End of stream:
+Import to table:8,6
+Read file complete
+End of stream:
+Import to table:8,16
+Read file complete
+End of stream:
+Import to table:3,5
+Read file complete
+End of stream:
+Import to table:A
+Read file complete
+End of stream:
+Import to table:True
+Read file complete
+Config_UI: total hp: 1
+caluate_point
+Caluate Values: 
+138,163,5GiỏiDiemHPLoad
+Config_UI: total hp: 0
+Read File()
+Reset alll 
+caluate_point
+Caluate Values: 
+0000-
+Config_UI: total hp: 0
+Location:
+C:\Users\LENOVO\Desktop\diemtest.QNUEnd of stream:
+Import to table:Toán Logic
+Import to table:Lập trình cơ bản
+Import to table:Giải tích 1
+Import to table:Rắp ráp máy tín3
+Import to table:Tiếng anh 1
+Import to table:Xác chết thống kê
+Read file ERROR:
+Reset alll 
+caluate_point
+Caluate Values: 
+0000-
+Config_UI: total hp: 0
+Read File()
+Reset alll 
+caluate_point
+Caluate Values: 
+0000-
+Config_UI: total hp: 0
+Location:
+C:\Users\LENOVO\Desktop\test.QNUEnd of stream:
+Import to table:Toán Logic
+End of stream:
+Import to table:3
+End of stream:
+Import to table:7,5
+End of stream:
+Import to table:8,6
+End of stream:
+Import to table:8,16
+End of stream:
+Import to table:3,5
+End of stream:
+Import to table:A
+End of stream:
+Import to table:True
+Read file complete
+Config_UI: total hp: 1
+caluate_point
+Caluate Values: 
+138,163,5Giỏi
+Read File()
+Reset alll 
+caluate_point
+Caluate Values: 
+0000-
+Config_UI: total hp: 0
+Location:
+C:\Users\LENOVO\Desktop\testfile.QNUEnd of stream:
+Import to table:Toán Logic
+Import to table:Đại số tuyến tính
+Import to table:Giải tích
+Import to table:Thực hành máy tính
+Import to table:Lập trình cơ bản
+Import to table:Tiếng anh 1
+Import to table:Triết học Mác LêNin
+End of stream:
+Import to table:2
+Import to table:3
+Import to table:3
+Import to table:1
+Import to table:3
+Import to table:3
+Import to table:3
+End of stream:
+Import to table:10
+Import to table:8
+Import to table:10
+Import to table:10
+Import to table:10
+Import to table:9,3
+Import to table:10
+End of stream:
+Import to table:7
+Import to table:6,5
+Import to table:7
+Import to table:10
+Import to table:10
+Import to table:7,9
+Import to table:7,3
+End of stream:
+Import to table:8,5
+Import to table:7,10
+Import to table:8,20
+Import to table:10,00
+Import to table:10,00
+Import to table:8,46
+Import to table:8,65
+End of stream:
+Import to table:3,5
+Import to table:3,00
+Import to table:3,50
+Import to table:4,00
+Import to table:4,00
+Import to table:3,50
+Import to table:3,50
+End of stream:
+Import to table:A
+Import to table:B+
+Import to table:A
+Import to table:A+
+Import to table:A+
+Import to table:A
+Import to table:A
+End of stream:
+Import to table:True
+Import to table:True
+Import to table:True
+Import to table:True
+Import to table:True
+Import to table:True
+Import to table:True
+Read file complete
+Config_UI: total hp: 7
+caluate_point
+Caluate Values: 
+7188,5683333,527778Giỏi
+Import modify index complete
+Import modify index complete
+Import modify index complete
+Import modify index complete
+Import modify index complete
+Import modify index complete
+Import modify index complete
+suaxoahp.ShowDialog()
+Modify_complete
+: Index: 1
+caluate_point
+Caluate Values: 
+7189,0516663,694444Xuất xắc
+Config_UI: total hp: 7
+add_hocphan
+caluate_point
+Caluate Values: 
+8219,1014283,738095Xuất xắc
+Add hp complete
+Config_UI: total hp: 8
+Save File()
+Location:
+C:\Users\LENOVO\Desktop\testqnufile.QNUSave file complete

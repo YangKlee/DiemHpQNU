@@ -163,11 +163,11 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label2.Location = new System.Drawing.Point(702, 566);
+            this.label2.Location = new System.Drawing.Point(704, 579);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(220, 13);
+            this.label2.Size = new System.Drawing.Size(235, 13);
             this.label2.TabIndex = 5;
-            this.label2.Text = "@YangKlee2024-Rel<Build: 100420241500>";
+            this.label2.Text = "@YangKlee2024-Rel2.0<Build: 100420241500>";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // import_bt

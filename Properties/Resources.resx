@@ -148,9 +148,7 @@
   <data name="7bcc2fce4836eb9b842149271804f1db" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\icon\7bcc2fce4836eb9b842149271804f1db.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pngtree-add-button-vector-png-image_6697932" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\pngtree-add-button-vector-png-image_6697932.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
+
   <data name="istockphoto-1369372299-612x612" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\icon\istockphoto-1369372299-612x612.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>

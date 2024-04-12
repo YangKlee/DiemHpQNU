@@ -143,16 +143,6 @@ namespace DiemHpQNU.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap pngtree_add_button_vector_png_image_6697932 {
-            get {
-                object obj = ResourceManager.GetObject("pngtree-add-button-vector-png-image_6697932", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap pngtree_minimalistic_blue_honeycomb_technology_background_picture_image_1085284 {
             get {
                 object obj = ResourceManager.GetObject("pngtree-minimalistic-blue-honeycomb-technology-background-picture-image_1085284", resourceCulture);
